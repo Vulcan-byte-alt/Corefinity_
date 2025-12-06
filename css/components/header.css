@@ -1,0 +1,329 @@
+/* Header - iOS-style Glassmorphic */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: var(--z-header);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.header--scrolled {
+  background: rgba(255, 255, 255, 0.12);
+  border-bottom-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Solid blue header after hero section */
+.header--solid-blue {
+  background: linear-gradient(135deg, #0a0f1e 0%, #1a2332 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.header--solid-blue .header__logo-link,
+.header--solid-blue .header__logo-text {
+  color: #ffffff;
+}
+
+.header--solid-blue .text-primary {
+  color: #ff6b4a;
+}
+
+.header--solid-blue .nav__link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.header--solid-blue .nav__link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header--solid-blue .mobile-menu-toggle__bar {
+  background-color: #ffffff;
+}
+
+/* Header over dark sections */
+.header--dark-section .header__logo-link,
+.header--dark-section .header__logo-text {
+  color: #ffffff;
+}
+
+.header--dark-section .nav__link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.header--dark-section .nav__link:hover {
+  color: #ffffff;
+}
+
+.header--dark-section .nav__link--active {
+  color: #ff6b4a;
+  background-color: rgba(255, 107, 74, 0.15);
+}
+
+/* Buttons maintain their own colors over dark sections */
+
+.header--dark-section .mobile-menu-toggle__bar {
+  background-color: #ffffff;
+}
+
+/* Header over white sections */
+.header--white-section .header__logo-link,
+.header--white-section .header__logo-text {
+  color: #0f172a;
+}
+
+.header--white-section .text-primary {
+  color: #1a5490;
+}
+
+.header--white-section .nav__link {
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.header--white-section .nav__link:hover {
+  color: #0f172a;
+  background-color: rgba(15, 23, 42, 0.08);
+}
+
+.header--white-section .nav__link--active {
+  color: #ff6b4a;
+  background-color: rgba(255, 107, 74, 0.15);
+}
+
+/* Buttons maintain their own colors over white sections */
+
+.header--white-section .mobile-menu-toggle__bar {
+  background-color: #0f172a;
+}
+
+.header__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  gap: 60px;
+}
+
+/* Logo */
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__logo-link {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.header__logo-link:hover {
+  opacity: 0.8;
+}
+
+.header__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.text-primary {
+  color: #ff6b4a;
+}
+
+/* Navigation */
+.nav {
+  display: none;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav__link--active {
+  color: #ff6b4a;
+  background-color: rgba(255, 107, 74, 0.15);
+}
+
+.nav__link--has-dropdown::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  transition: transform 0.2s ease;
+}
+
+.nav__link--has-dropdown[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+/* Header Actions */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+.mobile-menu-toggle__icon {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.2s ease;
+}
+
+.mobile-menu-toggle__icon::before,
+.mobile-menu-toggle__icon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu-toggle__icon::before {
+  top: -6px;
+}
+
+.mobile-menu-toggle__icon::after {
+  bottom: -6px;
+}
+
+.mobile-menu-toggle--active .mobile-menu-toggle__icon {
+  background-color: transparent;
+}
+
+.mobile-menu-toggle--active .mobile-menu-toggle__icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggle--active .mobile-menu-toggle__icon::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 15, 30, 0.95);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 24px var(--container-padding);
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  z-index: calc(var(--z-header) - 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-nav--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.mobile-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav__link {
+  display: block;
+  padding: 16px 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav__link:hover {
+  color: #ff6b4a;
+}
+
+.mobile-nav__cta {
+  margin-top: 24px;
+}
+
+/* Body padding for fixed header (with margin for floating header) */
+body {
+  padding-top: 0;
+}

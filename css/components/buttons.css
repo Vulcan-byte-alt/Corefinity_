@@ -1,0 +1,191 @@
+/* Buttons - Premium Clean Design */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+/* Primary Button - Corefinity Blue */
+.btn-primary,
+.btn--primary {
+  background: linear-gradient(135deg, #1a5490 0%, #1e40af 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(26, 84, 144, 0.25);
+}
+
+.btn-primary:hover,
+.btn--primary:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1a5490 100%);
+  box-shadow: 0 8px 24px rgba(26, 84, 144, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active,
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(26, 84, 144, 0.3);
+}
+
+/* Secondary Button - Coral/Orange */
+.btn-secondary,
+.btn--secondary {
+  background: linear-gradient(135deg, #ff6b4a 0%, #ff5232 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 107, 74, 0.25);
+}
+
+.btn-secondary:hover,
+.btn--secondary:hover {
+  background: linear-gradient(135deg, #ff5232 0%, #ff6b4a 100%);
+  box-shadow: 0 8px 24px rgba(255, 107, 74, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active,
+.btn--secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 107, 74, 0.3);
+}
+
+/* Outline Button */
+.btn-outline,
+.btn--outline {
+  background: transparent;
+  color: #1a5490;
+  border-color: #1a5490;
+}
+
+.btn-outline:hover,
+.btn--outline:hover {
+  background: #1a5490;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 84, 144, 0.2);
+}
+
+.btn-outline:active,
+.btn--outline:active {
+  transform: translateY(0);
+}
+
+/* Ghost Button */
+.btn-ghost,
+.btn--ghost {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-ghost:hover,
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-ghost:active,
+.btn--ghost:active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Glassmorphism Button */
+.btn-glass,
+.btn--glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-glass:hover,
+.btn--glass:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12),
+              inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-glass:active,
+.btn--glass:active {
+  transform: translateY(0);
+}
+
+/* Button Sizes */
+.btn-sm,
+.btn--sm {
+  padding: 8px 20px;
+  font-size: 0.875rem;
+  border-radius: 12px;
+}
+
+.btn-lg,
+.btn--lg {
+  padding: 18px 40px;
+  font-size: 1.125rem;
+  border-radius: 20px;
+}
+
+.btn-xl,
+.btn--xl {
+  padding: 22px 48px;
+  font-size: 1.25rem;
+  border-radius: 24px;
+}
+
+/* Full Width Button */
+.btn-block,
+.btn--block {
+  width: 100%;
+}
+
+/* Disabled State */
+.btn:disabled,
+.btn--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9375rem;
+  }
+
+  .btn-lg,
+  .btn--lg {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+/* Focus Styles */
+.btn:focus-visible {
+  outline: 3px solid rgba(26, 84, 144, 0.3);
+  outline-offset: 2px;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}

@@ -1,0 +1,437 @@
+/* Cards - Premium Clean Design */
+
+/* Feature Card */
+.feature-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card__overlay {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.feature-card:hover .feature-card__overlay::after {
+  opacity: 0.3;
+}
+
+.feature-card__overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 15, 30, 0.2) 0%, rgba(10, 15, 30, 0.4) 100%);
+  transition: all 0.4s ease;
+  opacity: 0.5;
+}
+
+.feature-card__content {
+  position: relative;
+  padding: 40px 36px 48px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1a5490 0%, #ff6b4a 100%);
+  border-radius: 100px;
+  opacity: 0.3;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1a5490 0%, #ff6b4a 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  border-color: rgba(26, 84, 144, 0.15);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card__icon {
+  width: 72px;
+  height: 72px;
+  margin: 20px auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 18px;
+  color: #1a5490;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(26, 84, 144, 0.08),
+              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.feature-card:hover .feature-card__icon {
+  background: linear-gradient(135deg, #1a5490 0%, #ff6b4a 100%);
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 84, 144, 0.25),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+}
+
+.feature-card__icon svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2;
+}
+
+.feature-card__title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 500;
+  color: #0f172a;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.feature-card__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #1a5490 0%, #ff6b4a 100%);
+  opacity: 0.2;
+}
+
+.feature-card__description {
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* Icon Card */
+.icon-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.icon-card:hover {
+  border-color: #1a5490;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transform: translateX(4px);
+}
+
+.icon-card__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  border-radius: 12px;
+  color: #1a5490;
+  transition: all 0.3s ease;
+}
+
+.icon-card:hover .icon-card__icon {
+  background: #1a5490;
+  color: #ffffff;
+}
+
+.icon-card__content {
+  flex: 1;
+}
+
+.icon-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.icon-card__description {
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Stat Card */
+.stat-card {
+  text-align: center;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: transparent;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.stat-card__icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  color: #ff6b4a;
+}
+
+.stat-card__value {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1a5490 0%, #ff6b4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.stat-card__label {
+  font-size: 0.9375rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+  transform: translateY(-4px);
+}
+
+.testimonial-card__content {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 24px;
+  font-style: italic;
+  flex-grow: 1;
+}
+
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.testimonial-card__avatar-placeholder {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #eff6ff 0%, #fee2e2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a5490;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.testimonial-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.testimonial-card__role {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.testimonial-card__company {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.star-rating__star {
+  width: 20px;
+  height: 20px;
+  color: #ff6b4a;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.4s ease;
+  text-align: center;
+  position: relative;
+}
+
+.pricing-card--featured {
+  border-color: #ff6b4a;
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(255, 107, 74, 0.15);
+}
+
+.pricing-card:hover {
+  border-color: #1a5490;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+}
+
+.pricing-card--featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+/* Case Study Card */
+.case-study-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 48px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.case-study-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .case-study-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .case-study-card--reverse {
+    direction: rtl;
+  }
+
+  .case-study-card--reverse > * {
+    direction: ltr;
+  }
+}
+
+.case-study-card__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.case-study-card__logo {
+  max-width: 200px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.case-study-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-study-card__title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.case-study-card__description {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.case-study-card__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.case-study-card__metric-value {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #10b981;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.case-study-card__metric-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}

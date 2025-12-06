@@ -1,0 +1,195 @@
+/* Platforms Grid - Dark Elegant Design */
+
+.platforms-slider {
+  width: 100%;
+  padding: 60px 0;
+  background: #0a0f1e;
+  position: relative;
+}
+
+.platforms-slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+}
+
+.platforms-slider__title {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 50px;
+}
+
+.platforms-slider__container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.platforms-slider__track {
+  display: flex;
+  gap: 60px;
+  animation: scroll 80s linear infinite;
+  width: max-content;
+}
+
+.platforms-slider__track:hover {
+  animation-play-state: paused;
+}
+
+.platforms-slider__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 60px;
+  padding: 12px;
+}
+
+.platforms-slider__logo {
+  max-width: 90px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) invert(1) brightness(1.2);
+  opacity: 0.65;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.platforms-slider__item:hover .platforms-slider__logo {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Developers Section */
+
+.developers-section {
+  padding: 100px 0;
+}
+
+/* Split Card Container */
+.developers-split-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+}
+
+/* Dark Left Side */
+.developers-split-card__dark {
+  background: linear-gradient(135deg, #0a0f1e 0%, #1a2332 100%);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.developers-split-card__dark::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.developers-split-card__dark::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.developers-split-card__text {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.developers-split-card__text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.developers-split-card__text p:last-child {
+  margin-bottom: 0;
+}
+
+.developers-split-card__dark .btn {
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Right Side */
+.developers-split-card__light {
+  background: #f8f9fa;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.developers-split-card__light img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.developers-split-card__light img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .developers-split-card {
+    grid-template-columns: 1fr;
+  }
+
+  .developers-split-card__dark,
+  .developers-split-card__light {
+    padding: 48px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .platforms-section {
+    padding: 60px 0;
+  }
+
+  .developers-section {
+    padding: 60px 0;
+  }
+
+  .developers-split-card__dark,
+  .developers-split-card__light {
+    padding: 40px 24px;
+  }
+
+  .developers-split-card__text p {
+    font-size: 1rem;
+  }
+}
