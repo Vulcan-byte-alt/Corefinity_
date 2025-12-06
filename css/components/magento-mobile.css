@@ -1,0 +1,250 @@
+/* ========================
+   MAGENTO MOBILE STYLES
+   Mobile-only responsive fixes
+   ======================== */
+
+@media (max-width: 1023px) {
+
+  /* ===== GLOBAL MOBILE FIXES ===== */
+
+  /* Prevent horizontal overflow */
+  .platform-overview,
+  .key-features-modern,
+  .performance-section,
+  .stack-section,
+  .migration-process,
+  .testimonials-slider-section,
+  .support-team-section {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+
+  /* ===== PERFORMANCE SECTION ===== */
+
+  /* Stack layout vertically on mobile */
+  .performance-layout {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .performance-included {
+    max-width: 100%;
+    padding: 28px 24px;
+    min-height: auto;
+  }
+
+  /* Fix metrics grid for mobile */
+  .performance-metrics-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Reset all complex grid positioning */
+  .perf-metric-box:nth-child(1),
+  .perf-metric-box:nth-child(2),
+  .perf-metric-box:nth-child(3),
+  .perf-metric-box:nth-child(4),
+  .perf-metric-box:nth-child(5) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    justify-self: stretch !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 160px;
+  }
+
+  .perf-metric-box {
+    width: 100% !important;
+  }
+
+  /* ===== STACK SECTION ===== */
+
+  /* Single column layout */
+  .stack-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 32px 20px !important;
+  }
+
+  /* Hide connecting line on mobile */
+  .stack-features-grid::before {
+    display: none;
+  }
+
+  /* Hide connecting dots on mobile */
+  .stack-feature:nth-child(odd)::after,
+  .stack-feature:nth-child(even)::after {
+    display: none !important;
+  }
+
+  .stack-feature {
+    padding: 32px 24px;
+  }
+
+  .stack-feature__icon {
+    width: 64px;
+    height: 64px;
+    font-size: 1.75rem;
+  }
+
+  .stack-feature__title {
+    font-size: 1.125rem;
+  }
+
+  .stack-feature__description {
+    font-size: 0.9375rem;
+  }
+
+  /* ===== PLATFORM OVERVIEW ===== */
+
+  .platform-overview__content {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+
+  /* ===== SUPPORT TEAM SECTION ===== */
+
+  .support-team-metrics {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .support-metric-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .support-metric-card__image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  .support-metric-card__content {
+    text-align: left;
+  }
+
+  .support-team-content-card {
+    padding: 28px 24px;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+
+  .testimonial-card-large {
+    flex-direction: column;
+    padding: 32px 24px;
+  }
+
+  .testimonial-card-large__text-content {
+    padding-right: 0;
+  }
+
+  .testimonial-card-large__text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .testimonial-card-large__aside {
+    margin-top: 24px;
+    align-items: center;
+  }
+
+  /* ===== MIGRATION CTA ===== */
+
+  .migration-cta__card {
+    padding: 40px 24px !important;
+  }
+
+  /* ===== PRICING SECTION ===== */
+
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .pricing-card {
+    max-width: 100%;
+  }
+
+  /* ===== AFFORDABLE LUXURY ===== */
+
+  .affordable-luxury__content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .affordable-luxury__left,
+  .affordable-luxury__right {
+    flex: none;
+    max-width: 100%;
+  }
+
+  /* ===== MIGRATION PROCESS ===== */
+
+  .migration-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .migration-card {
+    padding: 28px 24px;
+  }
+
+  /* ===== REDUCE PADDING ON ALL SECTIONS ===== */
+
+  .platform-overview,
+  .key-features-modern,
+  .stack-section,
+  .migration-process,
+  .testimonials-slider-section,
+  .support-team-section {
+    padding: 60px 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 1.75rem !important;
+  }
+
+  .section-description {
+    font-size: 1rem !important;
+  }
+
+}
+
+/* ===== EXTRA SMALL MOBILE (< 480px) ===== */
+
+@media (max-width: 480px) {
+
+  .performance-metrics-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .perf-metric-box {
+    max-width: 100%;
+  }
+
+  .stack-features-grid {
+    padding: 24px 16px !important;
+  }
+
+  .stack-feature {
+    padding: 24px 20px;
+  }
+
+  .container {
+    padding: 0 12px !important;
+  }
+
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+
+}

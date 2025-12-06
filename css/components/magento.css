@@ -2,6 +2,45 @@
    MAGENTO PAGE STYLES
    ======================== */
 
+/* Mobile overflow prevention - targeted approach */
+@media (max-width: 1023px) {
+  body,
+  main,
+  section:not(.platforms-slider),
+  .container,
+  .platform-overview,
+  .platform-overview__wrapper,
+  .migration-cta,
+  .migration-cta__card,
+  .stack-section,
+  .support-team-section,
+  .dark-section-wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Fix grid columns on mobile - not sliders */
+  .platform-overview__content,
+  .support-team-metrics,
+  .stack-features-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Ensure sliders can scroll horizontally */
+  .platforms-slider,
+  .platforms-slider__container,
+  .platforms-slider__track {
+    max-width: 100%;
+    overflow-x: visible;
+  }
+}
+
 /* Platform Overview Section */
 .platform-overview {
   padding: clamp(100px, 12vw, 140px) 0;

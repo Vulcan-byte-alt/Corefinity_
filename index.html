@@ -157,27 +157,29 @@
           </ul>
         </nav>
 
-        <!-- Header Actions -->
-        <div class="header__actions">
+        <!-- CTA Buttons -->
+        <div class="header__cta">
           <a href="#demo" class="btn btn-secondary">Free Demo</a>
-          <a href="#contact" class="btn btn-ghost desktop\:block mobile\:hidden">Contact</a>
-
-          <!-- Mobile Menu Toggle -->
-          <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-            <span class="mobile-menu-toggle__icon"></span>
-          </button>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
         </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="mobile-menu-toggle__bar"></span>
+          <span class="mobile-menu-toggle__bar"></span>
+          <span class="mobile-menu-toggle__bar"></span>
+        </button>
       </div>
     </div>
 
     <!-- Mobile Navigation -->
-    <nav class="mobile-nav" aria-label="Mobile navigation">
+    <nav class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
-          <a href="#why" class="mobile-nav__link mobile-nav__link--active">Why Corefinity?</a>
+          <a href="#why" class="mobile-nav__link">Why Corefinity?</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="solutions-magento.html" class="mobile-nav__link">Solutions</a>
+          <a href="solutions.html" class="mobile-nav__link">Solutions</a>
         </li>
         <li class="mobile-nav__item">
           <a href="#quote" class="mobile-nav__link">Get a quote</a>
@@ -186,14 +188,20 @@
           <a href="agency.html" class="mobile-nav__link">Partners</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="#support" class="mobile-nav__link">Support</a>
-        </li>
-        <li class="mobile-nav__item">
-          <a href="#contact" class="mobile-nav__link">Contact</a>
+          <span class="mobile-nav__label">Resources</span>
+          <ul class="mobile-nav__submenu">
+            <li><a href="#blog" class="mobile-nav__sublink">Blog</a></li>
+            <li><a href="#case-studies" class="mobile-nav__sublink">Case Studies</a></li>
+            <li><a href="#testimonials" class="mobile-nav__sublink">Testimonials</a></li>
+            <li><a href="#documentation" class="mobile-nav__sublink">Documentation</a></li>
+            <li><a href="#api-docs" class="mobile-nav__sublink">API Documentation</a></li>
+            <li><a href="#faqs" class="mobile-nav__sublink">FAQs</a></li>
+          </ul>
         </li>
       </ul>
       <div class="mobile-nav__cta">
-        <a href="#demo" class="btn btn-primary btn-block">Free Demo</a>
+        <a href="#demo" class="btn btn-secondary btn-block">Free Demo</a>
+        <a href="#contact" class="btn btn-ghost btn-block">Contact</a>
       </div>
     </nav>
   </header>

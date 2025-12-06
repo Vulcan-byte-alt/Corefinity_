@@ -27,12 +27,34 @@
 /* Global Styles */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: #fafbfc;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Prevent all overflow on mobile */
+@media (max-width: 1023px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Container */
@@ -40,6 +62,14 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(20px, 5vw, 80px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 100% !important;
+    padding: 0 16px !important;
+  }
 }
 
 /* Section */
@@ -120,6 +150,13 @@ body {
   padding-bottom: 120px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+}
+
+@media (max-width: 1023px) {
+  .hero {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 /* Hero Background Video/Image */
@@ -208,6 +245,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .hero__container {
+    padding: 0 32px;
+  }
 }
 
 /* Hero Content */
