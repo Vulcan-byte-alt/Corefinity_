@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:www.corefinity.com)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

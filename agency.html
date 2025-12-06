@@ -13,6 +13,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -29,7 +32,7 @@
         <!-- Logo -->
         <div class="header__logo">
           <a href="/" class="header__logo-link" aria-label="Corefinity Home">
-            <span class="header__logo-text">core<span class="text-primary">finity</span></span>
+            <img src="images/corefinity-logo.png" alt="Corefinity" class="header__logo-img">
           </a>
         </div>
 
@@ -37,128 +40,119 @@
         <nav class="nav" aria-label="Main navigation">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html#performance" class="nav__link">Performance</a>
+              <a href="index.html#why" class="nav__link">Why Corefinity?</a>
             </li>
             <li class="nav__item">
-              <a href="index.html#testimonials" class="nav__link">Testimonials</a>
-            </li>
-            <li class="nav__item mega-menu">
-              <button class="nav__link nav__link--has-dropdown mega-menu__trigger" aria-expanded="false" aria-haspopup="true">
-                Solutions
-              </button>
-              <!-- Mega Menu Dropdown -->
-              <div class="mega-menu__dropdown" aria-hidden="true">
-                <div class="mega-menu__container">
-
-                  <!-- Content Resources -->
-                  <div class="mega-menu__column">
-                    <h3 class="mega-menu__column-title">Content Resources</h3>
-                    <ul class="mega-menu__items">
-                      <li>
-                        <a href="#" class="mega-menu__link">
-                          <div class="mega-menu__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                            </svg>
-                          </div>
-                          <div class="mega-menu__content">
-                            <div class="mega-menu__item-title">Blog</div>
-                            <p class="mega-menu__item-description">News, tutorials and best practices for Magento, WooCommerce</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="mega-menu__link">
-                          <div class="mega-menu__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                            </svg>
-                          </div>
-                          <div class="mega-menu__content">
-                            <div class="mega-menu__item-title">Case Studies</div>
-                            <p class="mega-menu__item-description">Before/after performance wins, migrations and growth stories</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="mega-menu__link">
-                          <div class="mega-menu__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                          </div>
-                          <div class="mega-menu__content">
-                            <div class="mega-menu__item-title">Testimonials</div>
-                            <p class="mega-menu__item-description">Real words from real customers — speed, stability, support</p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <!-- Technical Resources -->
-                  <div class="mega-menu__column">
-                    <h3 class="mega-menu__column-title">Technical Resources</h3>
-                    <ul class="mega-menu__items">
-                      <li>
-                        <a href="#" class="mega-menu__link">
-                          <div class="mega-menu__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                          </div>
-                          <div class="mega-menu__content">
-                            <div class="mega-menu__item-title">Documentation</div>
-                            <p class="mega-menu__item-description">Everything you need to run, monitor and optimise your stack</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="mega-menu__link">
-                          <div class="mega-menu__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                            </svg>
-                          </div>
-                          <div class="mega-menu__content">
-                            <div class="mega-menu__item-title">API Documentation</div>
-                            <p class="mega-menu__item-description">How to use the Corefinity dashboard - from team roles to zero-downtime deploys</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" class="mega-menu__link">
-                          <div class="mega-menu__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                          </div>
-                          <div class="mega-menu__content">
-                            <div class="mega-menu__item-title">FAQs</div>
-                            <p class="mega-menu__item-description">Short, straight answers on performance, pricing, support and SLAs</p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <!-- Visual Panel -->
-                  <div class="mega-menu__visual">
-                    <div class="mega-menu__visual-placeholder">
-                      <svg style="width: 64px; height: 64px; opacity: 0.3; color: var(--color-primary);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+              <a href="solutions.html" class="nav__link">Solutions</a>
             </li>
             <li class="nav__item">
               <a href="#quote" class="nav__link">Get a quote</a>
             </li>
             <li class="nav__item">
               <a href="agency.html" class="nav__link">Partners</a>
+            </li>
+            <li class="nav__item nav__item--has-mega">
+              <button class="nav__link nav__link--mega-trigger" aria-expanded="false" aria-haspopup="true">
+                Resources
+              </button>
+
+              <!-- Mega Menu -->
+              <div class="mega-menu" aria-hidden="true">
+                <div class="mega-menu__container">
+                  <div class="mega-menu__content">
+                    <!-- Left Column - Content Resources -->
+                    <div class="mega-menu__column">
+                      <h3 class="mega-menu__title">Content Resources</h3>
+                      <ul class="mega-menu__list">
+                        <li class="mega-menu__item" data-visual="blog">
+                          <a href="#blog" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-newspaper"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">Blog</h4>
+                              <p class="mega-menu__item-desc">News, tutorials and best practices for Magento, WooCommerce</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mega-menu__item" data-visual="case-studies">
+                          <a href="#case-studies" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">Case Studies</h4>
+                              <p class="mega-menu__item-desc">Before/after performance wins, migrations and growth stories</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mega-menu__item" data-visual="testimonials">
+                          <a href="index.html#testimonials" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">Testimonials</h4>
+                              <p class="mega-menu__item-desc">Real words from real customers — speed, stability, support</p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Middle Column - Technical Resources -->
+                    <div class="mega-menu__column">
+                      <h3 class="mega-menu__title">Technical Resources</h3>
+                      <ul class="mega-menu__list">
+                        <li class="mega-menu__item" data-visual="documentation">
+                          <a href="#documentation" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-book"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">Documentation</h4>
+                              <p class="mega-menu__item-desc">Everything you need to run, monitor and optimise your stack</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mega-menu__item" data-visual="api">
+                          <a href="#api-docs" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-code"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">API Documentation</h4>
+                              <p class="mega-menu__item-desc">How to use the Corefinity dashboard - from team roles to zero-downtime deploys</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mega-menu__item" data-visual="faqs">
+                          <a href="#faqs" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">FAQs</h4>
+                              <p class="mega-menu__item-desc">Short, straight answers on performance, pricing, support and SLAs</p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Right Column - Dynamic Visual -->
+                    <div class="mega-menu__visual">
+                      <div class="mega-menu__visual-content" data-visual-id="default">
+                        <img src="images/mega-menu/resources-default.jpg" alt="Corefinity Resources" class="mega-menu__visual-img">
+                        <div class="mega-menu__visual-overlay">
+                          <h3 class="mega-menu__visual-title">Explore Our Resources</h3>
+                          <p class="mega-menu__visual-text">Documentation, guides, and insights to help you succeed</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
@@ -219,17 +213,16 @@
       <div class="hero__container container">
         <div class="hero__content">
           <h1 id="hero-title" class="hero-title">
-            Managed Hosting for <span class="gradient-text">Agencies</span>
+            Managed Hosting for <span class="hero-highlight">Agencies</span>
           </h1>
 
           <p class="hero-subtitle">
-            Speed, reliability and support your developers can count day and night.  
+            Speed, reliability and support your developers can count day and night.
           </p>
 
           <!-- CTA Buttons -->
           <div class="btn-group">
-            <a href="#partnership" class="btn btn-primary btn-lg">Become a Partner</a>
-            <a href="#benefits" class="btn btn-glass btn-lg">Learn More</a>
+            <a href="#contact" class="btn btn-secondary btn-lg">Chat to an Expert</a>
           </div>
 
           <!-- Cloud Provider Logos -->
@@ -1047,7 +1040,7 @@
         <!-- Company Info -->
         <div class="footer__column">
           <div class="footer__logo">
-            <span class="header__logo-text" style="font-size: var(--text-2xl);">core<span class="text-accent">finity</span></span>
+            <img src="images/corefinity-logo.png" alt="Corefinity" class="footer__logo-img">
           </div>
           <p class="footer__column-text">
             Platform agnostic cloud and infrastructure specialists, intensely focused on ecommerce.
@@ -1142,6 +1135,7 @@
   </footer>
 
   <!-- JavaScript -->
+  <script src="js/mega-menu.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/interactive-features.js" defer></script>
 

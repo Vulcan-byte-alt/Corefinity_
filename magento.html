@@ -40,19 +40,119 @@
         <nav class="nav" aria-label="Main navigation">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html#performance" class="nav__link">Performance</a>
+              <a href="index.html#why" class="nav__link">Why Corefinity?</a>
             </li>
             <li class="nav__item">
-              <a href="index.html#testimonials" class="nav__link">Testimonials</a>
+              <a href="solutions.html" class="nav__link">Solutions</a>
+            </li>
+            <li class="nav__item">
+              <a href="#quote" class="nav__link">Get a quote</a>
             </li>
             <li class="nav__item">
               <a href="agency.html" class="nav__link">Partners</a>
             </li>
-            <li class="nav__item">
-              <a href="#support" class="nav__link">Support</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+            <li class="nav__item nav__item--has-mega">
+              <button class="nav__link nav__link--mega-trigger" aria-expanded="false" aria-haspopup="true">
+                Resources
+              </button>
+
+              <!-- Mega Menu -->
+              <div class="mega-menu" aria-hidden="true">
+                <div class="mega-menu__container">
+                  <div class="mega-menu__content">
+                    <!-- Left Column - Content Resources -->
+                    <div class="mega-menu__column">
+                      <h3 class="mega-menu__title">Content Resources</h3>
+                      <ul class="mega-menu__list">
+                        <li class="mega-menu__item" data-visual="blog">
+                          <a href="#blog" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-newspaper"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">Blog</h4>
+                              <p class="mega-menu__item-desc">News, tutorials and best practices for Magento, WooCommerce</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mega-menu__item" data-visual="case-studies">
+                          <a href="#case-studies" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">Case Studies</h4>
+                              <p class="mega-menu__item-desc">Before/after performance wins, migrations and growth stories</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mega-menu__item" data-visual="testimonials">
+                          <a href="index.html#testimonials" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">Testimonials</h4>
+                              <p class="mega-menu__item-desc">Real words from real customers — speed, stability, support</p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Middle Column - Technical Resources -->
+                    <div class="mega-menu__column">
+                      <h3 class="mega-menu__title">Technical Resources</h3>
+                      <ul class="mega-menu__list">
+                        <li class="mega-menu__item" data-visual="documentation">
+                          <a href="#documentation" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-book"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">Documentation</h4>
+                              <p class="mega-menu__item-desc">Everything you need to run, monitor and optimise your stack</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mega-menu__item" data-visual="api">
+                          <a href="#api-docs" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-code"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">API Documentation</h4>
+                              <p class="mega-menu__item-desc">How to use the Corefinity dashboard - from team roles to zero-downtime deploys</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="mega-menu__item" data-visual="faqs">
+                          <a href="#faqs" class="mega-menu__link">
+                            <div class="mega-menu__icon">
+                              <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="mega-menu__text">
+                              <h4 class="mega-menu__item-title">FAQs</h4>
+                              <p class="mega-menu__item-desc">Short, straight answers on performance, pricing, support and SLAs</p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Right Column - Dynamic Visual -->
+                    <div class="mega-menu__visual">
+                      <div class="mega-menu__visual-content" data-visual-id="default">
+                        <img src="images/mega-menu/resources-default.jpg" alt="Corefinity Resources" class="mega-menu__visual-img">
+                        <div class="mega-menu__visual-overlay">
+                          <h3 class="mega-menu__visual-title">Explore Our Resources</h3>
+                          <p class="mega-menu__visual-text">Documentation, guides, and insights to help you succeed</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
@@ -60,7 +160,7 @@
         <!-- CTA Buttons -->
         <div class="header__cta">
           <a href="#demo" class="btn btn-secondary">Free Demo</a>
-          <a href="#contact" class="btn btn-primary">Contact</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -535,7 +635,6 @@
           </div>
         </div>
       </section>
-    </div>
 
     <!-- Don't Just Take our Word for it - Testimonials -->
     <section class="testimonials-slider-section" aria-labelledby="testimonials-slider-title">
@@ -616,6 +715,7 @@
         </div>
       </div>
     </section>
+    </div><!-- End Dark Section Wrapper -->
 
     <!-- The Stack Section -->
     <section class="stack-section" aria-labelledby="stack-title">
@@ -1238,7 +1338,8 @@
     </div>
   </footer>
 
-  <!-- Main JavaScript -->
+  <!-- JavaScript -->
+  <script src="js/mega-menu.js"></script>
   <script src="js/main.js"></script>
 
 </body>
