@@ -140,22 +140,37 @@ body {
 .hero {
   position: relative;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   background: #0a0f1e;
   padding: 0;
-  margin-top: 0;
-  padding-top: calc(var(--header-height) + 100px);
-  padding-bottom: 120px;
+  margin: 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+  left: 0;
+  right: 0;
 }
 
 @media (max-width: 1023px) {
   .hero {
+    height: 100vh;
+    min-height: 100vh;
+    padding-top: var(--header-height);
+    padding-bottom: 0;
+    margin: 0;
     width: 100%;
     margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: calc(var(--header-height) + 100px);
+    padding-bottom: 120px;
+    height: auto;
   }
 }
 
@@ -245,7 +260,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0 16px;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 768px) {

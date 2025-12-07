@@ -10,6 +10,17 @@
   background-image: url('../../images/features-bg.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1023px) {
+  .interactive-features {
+    background-image: url('../../images/features-bg-mobile.png') !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
 }
 
 /* Dark overlay for text readability */
@@ -446,6 +457,10 @@
   .interactive-features {
     padding: 80px 0;
     min-height: auto;
+    background-image: url('../../images/features-bg-mobile.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
   }
 
   .interactive-features__grid {
@@ -456,6 +471,7 @@
   .interactive-feature-card {
     padding: 36px 24px;
   }
+}
 
   .case-study-carousel {
     margin-top: 60px;

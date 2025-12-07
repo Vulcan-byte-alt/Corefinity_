@@ -496,27 +496,102 @@
     padding: 80px 0;
   }
 
+  .performance-audits__subtitle {
+    font-size: 1rem;
+    padding: 0 16px;
+  }
+
   .performance-audits__table-wrapper {
     flex-direction: column;
     gap: 20px;
+    margin-top: 40px;
   }
 
   .performance-audits__arrow {
     display: none;
   }
 
-  .performance-table {
-    font-size: 0.75rem;
+  .performance-audits__table-container {
+    overflow: visible;
   }
 
-  .performance-table__header,
-  .performance-table__cell {
-    padding: 12px 8px;
-    font-size: 0.75rem;
+  /* Mobile Table - Comparison Cards */
+  .performance-table {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: transparent;
+    border: none;
+  }
+
+  .performance-table thead {
+    display: none;
+  }
+
+  .performance-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .performance-table__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(60px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 24px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .performance-table__row--difference {
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .performance-table__cell--label {
-    padding-left: 12px;
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 0 0 16px 0;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .performance-table__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  .performance-table__cell::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .performance-table__cell--value {
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+
+  .performance-table__cell:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 
   .video-testimonials__player-wrapper {

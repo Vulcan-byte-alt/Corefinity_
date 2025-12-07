@@ -800,24 +800,23 @@
   }
 
   .performance-metrics-row {
-    grid-template-columns: repeat(3, 120px);
+    grid-template-columns: 1fr;
+    justify-content: stretch;
     gap: 12px;
   }
 
   .perf-metric-box {
-    width: 120px;
+    width: 100%;
   }
 
-  .perf-metric-box:nth-child(4) {
-    grid-column: 2;
-    grid-row: 2;
-    justify-self: end;
-  }
-
+  .perf-metric-box:nth-child(1),
+  .perf-metric-box:nth-child(2),
+  .perf-metric-box:nth-child(3),
+  .perf-metric-box:nth-child(4),
   .perf-metric-box:nth-child(5) {
-    grid-column: 3;
-    grid-row: 2;
-    justify-self: start;
+    grid-column: 1;
+    justify-self: stretch;
+    margin: 0;
   }
 
   .perf-metric-box__image {
