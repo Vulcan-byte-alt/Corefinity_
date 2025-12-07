@@ -349,7 +349,8 @@ body {
   color: #1a5490;
   background: none;
   -webkit-text-fill-color: initial;
-  text-shadow: 0 0 20px rgba(26, 84, 144, 0.5), 0 0 40px rgba(26, 84, 144, 0.3);
+  text-shadow: 0 0 30px rgba(26, 84, 144, 0.8), 0 0 60px rgba(26, 84, 144, 0.5), 0 0 90px rgba(26, 84, 144, 0.3);
+  filter: drop-shadow(0 0 10px rgba(26, 84, 144, 0.6));
 }
 
 @keyframes slideUp {
@@ -443,18 +444,19 @@ body {
 
 @media (max-width: 768px) {
   .hero__cloud-logos {
-    gap: 24px;
-    flex-wrap: wrap;
+    gap: 16px;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
   .hero__cloud-logo-link {
-    min-width: 100px;
-    min-height: 60px;
+    min-width: 80px;
+    min-height: 50px;
   }
 
   .hero__cloud-logo-image {
-    max-width: 80px;
-    max-height: 36px;
+    max-width: 70px;
+    max-height: 32px;
   }
 }
 
@@ -661,7 +663,27 @@ body {
 @media (max-width: 767px) {
   .hero {
     min-height: auto;
-    padding: 120px 0 60px;
+    padding: 140px 0 80px;
+  }
+
+  .hero__container {
+    padding: 0 20px;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.9375rem, 4vw, 1.125rem);
+    margin-bottom: 40px;
+    line-height: 1.6;
   }
 
   .hero__visual {
@@ -675,6 +697,7 @@ body {
   .btn-group {
     flex-direction: column;
     width: 100%;
+    margin-bottom: 40px;
   }
 
   .btn-group .btn {
