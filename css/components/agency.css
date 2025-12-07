@@ -855,10 +855,7 @@ section {
   background: #ffffff;
   border-radius: 40px;
   padding: 70px 80px;
-  box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.04),
-    0 20px 80px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  box-shadow: none;
   border: 1px solid rgba(226, 232, 240, 0.6);
   max-width: 1400px;
   margin: 0 auto;
@@ -942,9 +939,7 @@ section {
   position: relative;
   border-radius: 32px;
   overflow: hidden;
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.12),
-    0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   background: #000000;
   width: 100%;
   aspect-ratio: 16 / 9.5;
@@ -1249,6 +1244,11 @@ section {
     height: 64px;
   }
 
+  .snapshot-hero-card__stats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .snapshot-stat {
     padding: 20px 16px;
   }
@@ -1440,7 +1440,7 @@ section {
 
 @media (max-width: 640px) {
   .migration-image-bar {
-    height: 200px;
+    height: 320px;
     margin: 40px 0 32px;
   }
 
@@ -1626,10 +1626,7 @@ section {
   border-radius: 40px;
   padding: clamp(60px, 8vw, 80px) clamp(40px, 6vw, 60px);
   text-align: center;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    0 20px 80px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: none;
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: relative;
   overflow: hidden;
@@ -1656,10 +1653,7 @@ section {
 
 .ready-to-partner-card:hover {
   transform: translateY(-8px);
-  box-shadow:
-    0 16px 48px rgba(0, 0, 0, 0.4),
-    0 32px 100px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: none;
   border-color: rgba(255, 255, 255, 0.25);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
@@ -1786,6 +1780,13 @@ section {
   .accreditations-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  /* Center the last (5th) badge when it's alone in the row */
+  .accreditation-badge:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
   }
 
   .accreditation-badge {

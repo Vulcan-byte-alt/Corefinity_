@@ -56,8 +56,8 @@
       document.body.style.overflow = !isExpanded ? 'hidden' : '';
     });
 
-    // Close menu when clicking on a link
-    const mobileLinks = mobileNav.querySelectorAll('.mobile-nav__link');
+    // Close menu when clicking on a link (including sublinks)
+    const mobileLinks = mobileNav.querySelectorAll('.mobile-nav__link, .mobile-nav__sublink');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         toggle.setAttribute('aria-expanded', 'false');
