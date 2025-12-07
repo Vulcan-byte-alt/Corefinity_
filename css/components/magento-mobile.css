@@ -53,7 +53,14 @@
     justify-self: stretch !important;
     margin: 0 !important;
     width: 100% !important;
-    max-width: 160px;
+    max-width: none;
+  }
+
+  /* Center last card */
+  .perf-metric-box:nth-child(5) {
+    grid-column: 1 / -1 !important;
+    max-width: 50% !important;
+    justify-self: center !important;
   }
 
   .perf-metric-box {
@@ -62,11 +69,12 @@
 
   /* ===== STACK SECTION ===== */
 
-  /* Single column layout */
+  /* Compact 2-column grid layout */
   .stack-features-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-    padding: 32px 20px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px;
+    padding: 24px 16px !important;
+    box-shadow: none !important;
   }
 
   /* Hide connecting line on mobile */
@@ -81,21 +89,127 @@
   }
 
   .stack-feature {
-    padding: 32px 24px;
+    padding: 20px 16px;
+    text-align: center;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
   .stack-feature__icon {
-    width: 64px;
-    height: 64px;
-    font-size: 1.75rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+    margin-bottom: 0;
   }
 
   .stack-feature__title {
-    font-size: 1.125rem;
+    font-size: 0.75rem;
+    line-height: 1.3;
+    margin-bottom: 0;
   }
 
   .stack-feature__description {
-    font-size: 0.9375rem;
+    display: none;
+  }
+
+  /* ===== PRICING SECTION ===== */
+
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .pricing-card {
+    padding: 24px 20px !important;
+    min-height: auto;
+  }
+
+  .pricing-card::before,
+  .pricing-card::after {
+    display: none !important;
+  }
+
+  .pricing-card__name {
+    font-size: 1.5rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  .pricing-card__supports {
+    margin-bottom: 16px;
+  }
+
+  .pricing-card__supports h4 {
+    font-size: 0.875rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .pricing-card__supports p {
+    font-size: 0.8125rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .pricing-card__solution {
+    margin-bottom: 20px;
+  }
+
+  .pricing-card__solution h4 {
+    font-size: 0.875rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .pricing-card__solution > p {
+    font-size: 0.8125rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .pricing-card__solution ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 12px;
+  }
+
+  .pricing-card__solution li {
+    font-size: 0.75rem !important;
+    padding-left: 16px;
+  }
+
+  .pricing-card__solution li::before {
+    width: 4px;
+    height: 4px;
+    left: 4px;
+    top: 8px;
+  }
+
+  .pricing-card__price {
+    padding-top: 16px !important;
+    margin-top: 16px !important;
+  }
+
+  .pricing-card__amount {
+    font-size: 2rem !important;
+  }
+
+  .pricing-card__period {
+    font-size: 0.8125rem !important;
+  }
+
+  .pricing-enterprise__button {
+    padding: 12px 24px !important;
+    font-size: 0.875rem !important;
+    box-shadow: none !important;
+  }
+
+  .pricing-enterprise__button span {
+    font-size: 0.875rem !important;
+  }
+
+  .pricing-enterprise__arrow {
+    width: 16px !important;
+    height: 16px !important;
   }
 
   /* ===== PLATFORM OVERVIEW ===== */
@@ -224,11 +338,18 @@
 @media (max-width: 480px) {
 
   .performance-metrics-row {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
   }
 
   .perf-metric-box {
-    max-width: 100%;
+    max-width: none;
+  }
+
+  .perf-metric-box:nth-child(5) {
+    grid-column: 1 / -1 !important;
+    max-width: 50% !important;
+    justify-self: center !important;
   }
 
   .stack-features-grid {
